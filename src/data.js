@@ -93,7 +93,7 @@ export default [
         "Plush pillows and breathable bed linens",
         "Soft, oversized bath towels",
         "Full-sized, pH-balanced toiletries",
-        "Complimentary refreshments",
+        "Complimentary refreshments", 
         "Adequate safety/security",
         "Internet",
         "Comfortable beds"
@@ -672,7 +672,7 @@ export default [
         {
           fields: {
             file: {
-              url: img12
+             url: img12
             }
           }
         },
@@ -729,7 +729,7 @@ export default [
         {
           fields: {
             file: {
-              url: room1
+              //url: room1
             }
           }
         },
