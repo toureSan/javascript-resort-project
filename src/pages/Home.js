@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import Banner from '../components/Banner';
 import Services from '../components/Services';
 import FeaturedRoom from '../components/FeaturedRooms';
-
-
+import Button from '../components/Button';
 export default function Home() {
     return (
         <>
@@ -18,7 +17,7 @@ export default function Home() {
         </Hero>
         <Services />
         <FeaturedRoom />
- 
+     
         </>
     )
 }

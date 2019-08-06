@@ -12,7 +12,7 @@ export default function Room({ room }) {
                 <img src={images[0] || defaultImg} alt="single room" />
                 <div className="price-top">
                     <h6>{price}</h6>
-                    <p>per night</p>
+                    <p>pour la nuit</p>
                 </div>
                 <Link to={`/rooms/${slug}`}
                     className="btn-primary room-link">Featuerd</Link>

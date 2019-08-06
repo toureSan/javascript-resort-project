@@ -8,7 +8,7 @@ import StyledHero from '../components/StyledHero';
 export default class componentName extends Component {
     constructor(props) {
         super(props)
-     //   console.log(this.props);
+        //   console.log(this.props);
         this.state = {
             slug: this.props.match.params.slug, defaultBcg
         }
@@ -17,6 +17,7 @@ export default class componentName extends Component {
     static contextType = RoomContext;
     //componentDidMount(){  }
     render() {
+
         const { getRoom } = this.context;
         const room = getRoom(this.state.slug);
         if (!room) {
@@ -39,14 +40,23 @@ export default class componentName extends Component {
             images } = room
 
         return (
-            <StyledHero img={images[0] || this.state.defaultBcg}>
-                <Banner title={`${name} room`}>
-                    <Link to='/rooms' className='btn-primary'>
-                        Back to room
-                   </Link>
-                </Banner>
+            <>
+                <StyledHero img={images[0] || this.state.defaultBcg}>
+                    <Banner title={`${name} room`}>
+                        <Link to='/rooms' className='btn-primary'>
+                            Back to room
+                        </Link>
+                    </Banner>
+                </StyledHero>
+                <section className="single-room">
+                    <div ClassName="single-room-images ">
+                        {images.map((item, index) => {
+                            return <img key={index} src={item} alt={name} />
+                        })}
+                    </div>
+                </section>
+            </>
+        );
 
-            </StyledHero>
-        )
     }
 }
